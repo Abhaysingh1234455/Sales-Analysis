@@ -5,6 +5,7 @@ import Dashboard from "./componets/Dashboard";
 import SalesByCountry from "./componets/SalesByCountry";
 import SalesByProduct from "./componets/SalesByProduct";
 import MonthlySales from "./componets/MonthlySales";
+import PredictionForm from './componets/PredictionForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/country-sales" element={<SalesByCountry />} />
             <Route path="/product-sales" element={<SalesByProduct />} />
-           // <Route path="/monthly-sales" element={<MonthlySales />} />
+            <Route path="/monthly-sales" element={<MonthlySales />} />
+            <Route path="/PredictionForm" element={<PredictionForm />} />
           </Routes>
         </div>
       </div>

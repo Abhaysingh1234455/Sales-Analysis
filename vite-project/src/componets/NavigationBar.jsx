@@ -13,6 +13,7 @@ const NavigationBar = () => {
             <Nav.Link as={Link} to="/country-sales">Sales by Country</Nav.Link>
             <Nav.Link as={Link} to="/product-sales">Sales by Product</Nav.Link>
             <Nav.Link as={Link} to="/monthly-sales">Monthly Sales</Nav.Link>
+            <Nav.Link as={Link} to="/PredictionForm">Prediction Form</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

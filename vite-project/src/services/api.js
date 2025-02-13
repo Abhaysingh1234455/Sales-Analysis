@@ -47,7 +47,7 @@ export const fetchDashboardData = async () => {
 // Add fetchProductSales function
 export const fetchProductSales = async () => {
   try {
-    const response = await api.get('/product-sales');  // Adjust the endpoint accordingly
+    const response = await api.get('/product-sales');
     return response.data;
   } catch (error) {
     console.error('Error fetching product sales data:', error);
@@ -57,8 +57,7 @@ export const fetchProductSales = async () => {
 
 export const fetchCountrySales = async () => {
   try {
-    const response = await api.get('/country-sales');  
-    //console.log('Country Sales Data:', response.data); // Adjust the endpoint as necessary
+    const response = await api.get('/country-sales');
     
     // Convert object data to an array of { country, sales } objects
     const countrySalesArray = Object.entries(response.data).map(([country, sales]) => ({
@@ -75,10 +74,21 @@ export const fetchCountrySales = async () => {
 
 export const fetchMonthlySales = async () => {
   try {
-    const response = await api.get('/monthly-sales');  // Adjust this endpoint according to your backend API
+    const response = await api.get('/monthly-sales');
     return response.data;
   } catch (error) {
     console.error('Error fetching monthly sales data:', error);
+    throw error;
+  }
+};
+
+// Function to handle sales prediction
+export const predictSales = async (formData) => {
+  try {
+    const response = await api.post('/predict', formData);  // Send POST request to /predict
+    return response.data.predicted_sales;  // Return predicted sales from the response
+  } catch (error) {
+    console.error('Error predicting sales:', error);
     throw error;
   }
 };

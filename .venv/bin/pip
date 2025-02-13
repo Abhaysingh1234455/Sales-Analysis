@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/shivendra/Project-sales performance analysis and forecasting/.venv/bin/python" "$0" "$@"
+'''exec' "/Users/abhaysingh/Downloads/Project-sales performance analysis and forecasting/.venv/bin/python" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
